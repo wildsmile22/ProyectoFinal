@@ -1,0 +1,89 @@
+<ion-view view-title="Search">
+
+<form ng-submit="buscarResultado()">
+<div class="bar bar-subheader item-input-inset borde blueColor3"> 
+  <label class="item-input-wrapper " >
+    <i class="icon ion-ios-search placeholder-icon "></i>
+    <input type="text" placeholder="Search" ng-model="data.search">
+  </label>
+  <button class="button button-stable" type="submit">
+    Search
+  </button>
+</div>
+
+</form>
+
+  <ion-content class="has-subheader greyBG5">
+
+<button class="button button-full button-positive " style="margin:0px;" ng-click="MostrarFiltroPersona()" >
+ <h5> Filtrar La Búsqueda </h5>
+</button>
+
+<div class="card">
+                    <div class="item item-text-wrap">
+                        Response: <b ng-bind="response2"></b>
+                    </div>
+                </div>
+
+<!--Show filters -->
+<div ng-show="showSearchFilters" style="border-style: solid; border-bottom: thin solid #aaa;">
+<div class="card">
+    <div class="list">
+         <a>Rango de sueldo</a>
+        <div class="row">
+ <label class="item item-input col">
+    <input type="text" placeholder="Desde">
+  </label>
+<label class="item item-input col">
+    <input type="text" placeholder="Hasta">
+  </label>
+    </div>
+    </div>
+
+
+<div class="list">
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Fecha
+    </div>
+    <select>
+      <option>1 hora</option>
+      <option selected>1 dia</option>
+      <option>1 semana</option>
+      <option>1 mes</option>
+      
+    </select>
+  </label>
+
+</div>
+</div>
+
+
+
+
+</div>
+<!--FIN Show filters -->
+
+
+
+
+<div  data-ng-repeat="x in names">
+<div class="card col" style="width:45%;float:left; height:260px;">
+  <div class="item item-divider img">
+    {{ x.Nombre }}
+  </div>
+  <img class="full-image" ng-src="http://localhost/PHPTiendaPC/imagenes/{{ x.img_url }}">
+<div class="alinDerecha"> <h4>{{ x.precio }}€</h4></div>
+<div class="row alinDerecha2 energized">
+  <div class="icon ion-android-star"></div>
+  <div class="icon ion-android-star"></div>
+  <div class="icon ion-android-star"></div>
+  <div class="icon ion-android-star-half"></div>
+  <div class="icon ion-android-star-outline"></div>
+</div>
+</div>
+</div>
+
+  </ion-content>
+</ion-view>

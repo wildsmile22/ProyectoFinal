@@ -1,0 +1,56 @@
+<ion-modal-view>
+ 
+  <ion-content style="background-color:lightgrey;">
+<div class="row">
+  
+ 
+   <div class="col">
+     <img src="img/logo2.png" style="width: 200%;">
+     </div>
+    </br>
+     <div class="col"></div>
+</div>
+
+    <form class="list" ng-submit="SingUpData()">
+      <div class="col">
+  <label class="item item-input ">
+    <span class="input-label">Email</span>
+    <input type="email" ng-model="data.email">
+  </label>
+  
+ 
+  <label class="item item-input ">
+    <span class="input-label">Username</span>
+    <input type="text" ng-model="data.username">
+  </label>
+  <label class="item item-input ">
+    <span class="input-label">Password</span>
+    <input type="password" ng-model="data.password">
+  </label>
+  <label class="item item-input ">
+    <span class="input-label">Repeat Password</span>
+    <input type="password" ng-model="data.password2">
+  </label>
+      </div>
+
+<div class="card">
+                    <div class="item item-text-wrap">
+                        Response: <b ng-bind="response"></b>
+                    </div>
+                </div>
+
+
+
+<button class="button button-block button-calm" type="submit">
+  Sing up
+</button>
+</form>
+<div style="text-align:center;">
+<button class="button button-icon positive" ng-click="login()">
+ Log in
+</button>
+</div>
+
+  </ion-content>
+</ion-modal-view>
+

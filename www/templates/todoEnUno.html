@@ -1,0 +1,26 @@
+<ion-view>
+    <ion-content>
+
+<div  data-ng-repeat="x in names">
+
+<div class="card col" style="width:45%;float:left;height:260px;">
+  <div class="item item-divider img">
+    {{ x.Nombre }}
+  </div>
+  <img class="full-image" ng-src="http://localhost/PHPTiendaPC/imagenes/{{ x.img_url }}">
+<div class="alinDerecha"> <h4>{{ x.precio }}€</h4></div>
+<div class="row alinDerecha2 energized">
+  <div class="icon ion-android-star"></div>
+  <div class="icon ion-android-star"></div>
+  <div class="icon ion-android-star"></div>
+  <div class="icon ion-android-star-half"></div>
+  <div class="icon ion-android-star-outline"></div>
+</div>
+</div>
+
+
+
+
+</div>
+    </ion-content>
+</ion-view>

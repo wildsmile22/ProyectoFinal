@@ -1,0 +1,69 @@
+<ion-view view-title="Inicio">
+    <ion-content class="greyBG5 has-header" >
+
+         <ion-slide-box>
+  <ion-slide  class="greyBG4">
+   <img class="full-image"  ng-src="img/amd.jpg" >
+  </ion-slide>
+   <ion-slide  class="greyBG4">
+   <img class="full-image"  ng-src="img/ASUS ROG G750.png" >
+  </ion-slide>
+   <ion-slide  class="greyBG4">
+   <img class="full-image"  ng-src="img/mac-500x200.jpg" >
+  </ion-slide>
+   <ion-slide class="greyBG4">
+   <img class="full-image"  ng-src="img/logo_intel_w.png" >
+  </ion-slide>
+</ion-slide-box>
+
+<div class="row">
+<div class="card col blueColor">
+  <div class="item item-text-wrap blueColor2" style="text-align:center;" ng-click="irANuevo()">
+      <h2>
+      <div class="icon ion-pricetag" >
+      Nuevos</h2>
+    </div>
+  </div>
+<div class="card col blueColor">
+  <div class="item item-text-wrap blueColor2" style="text-align:center;" ng-click="irADestacados()">
+      <h2>
+      <div class="icon ion-alert" >
+      Destacados</h2>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div  data-ng-repeat="x in names">
+
+<div class="card col" style="width:45%;float:left; height:250px;">
+  <div class="item item-divider blueColor2">
+    {{ x.Nombre }}
+  </div>
+  <img class="full-image" ng-src="http://localhost/PHPTiendaPC/imagenes/{{ x.img_url }}">
+<div class="alinDerecha"> <h4>{{ x.precio }}€</h4></div>
+<div class="row alinDerecha2 energized">
+  <div class="icon ion-android-star"></div>
+  <div class="icon ion-android-star"></div>
+  <div class="icon ion-android-star"></div>
+  <div class="icon ion-android-star-half"></div>
+  <div class="icon ion-android-star-outline"></div>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+  
+</div>
+
+
+    </ion-content>
+</ion-view>
